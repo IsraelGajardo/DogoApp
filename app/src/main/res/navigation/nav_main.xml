@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/nav_breeds">
+    <fragment
+        android:id="@+id/nav_breeds"
+        android:name="com.dogoapp.ui.BreedsFragment"
+        tools:layout="@layout/fragment_breeds" >
+        <action
+            android:id="@+id/action_nav_breeds_to_nav_images"
+            app:destination="@id/nav_images" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_images"
+        android:name="com.dogoapp.ui.BreedImagesFragment"
+        tools:layout="@layout/fragment_breed_images" >
+        <action
+            android:id="@+id/action_nav_images_to_nav_expand"
+            app:destination="@id/nav_expand" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_expand"
+        android:name="com.dogoapp.ui.ImageExpandFragment"
+        tools:layout="@layout/fragment_image_expand" />
+</navigation>
